@@ -41,7 +41,11 @@ PKGS=(
 'ttf-hack'
 'ttf-meslo' # Nerdfont package
 'ttf-roboto'
-'zoom' # video conferences
+'docker'
+'kubectl'
+'virtualbox'
+'virtualbox-host-modules-arch' 
+'virtualbox-guest-iso'
 )
 
 for PKG in "${PKGS[@]}"; do
@@ -49,9 +53,10 @@ for PKG in "${PKGS[@]}"; do
 done
 
 export PATH=$PATH:~/.local/bin
-cp -r $HOME/ArchTitus/dotfiles/* $HOME/.config/
+cp -r $HOME/archtitus/dotfiles/* $HOME/.config/
 pip install konsave
-konsave -i $HOME/ArchTitus/kde.knsv
+konsave -i $HOME/archtitus/test.knsv
+#konsave -i $HOME/archtitus/kde.knsv
 sleep 1
 konsave -a kde
 
